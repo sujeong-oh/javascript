@@ -4,21 +4,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>고량주</title>
         <link rel="stylesheet" href="./style.css">
-       
     </Head>
     <body>
     <header>
         <span class="title">고량주</span>
     </header>
     <main>
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
+            <button type="button" class="add-button" id="addItem">추가</button>
             <span>전통주</span>
             <span>맥주</span>
             <span>칵테일</span>
             <span>와인</span>
             <span>하이볼</span>
         </div>
-        <section class="container">
+        <section class="container" id="container">
             <div class="card">
                 <img src="./images/traditional.jpg" alt="전통주" />
                 <span>요즘 전통주가 맛있더라구요</span>
@@ -28,7 +28,7 @@
                 <span>가끔 간단하게 마셔요</span>
             </div>
             <div class="card">
-                <img src="./images/cocktail.png" alt="칵테일" />
+                <img src="./images/cocktail.jpeg" alt="칵테일" />
                 <span>칵테일 좋아요~ 친구들과 특별한 날 마셔요</span>
             </div>
             <div class="card">
@@ -36,10 +36,25 @@
                 <span>달달한 와인을 좋아해요</span>
             </div>
             <div class="card">
-                <img src="./images/highball.png" alt="하이볼" />
+                <img src="./images/highball.png" alt="하이볼"/>
                 <span>얼그레이 하이볼이 요새 인기가 많던데 저도 좋아해요ㅋㅋㅋ</span>
             </div>
         </section>
     </main>
+
+    <div class="modal-background" id="modal">
+        <form class="modal" id="addItemForm">
+            <span class="modal-close" id="closeModal">X</span>
+            <label for="name" class="label">이름</label>
+            <input id="name" type="text" placeholder="막걸리" class="input" maxlength="10" required/>
+            <label for="image" class="label">이미지</label>
+            <input id="image" type="text" placeholder="URL" class="input" required />
+            <label for="content" class="label">내용</label>
+            <input id="content" type="text" placeholder="저는 싫어해요" class="input" required />
+            <button type="submit" class="submit-button">저장</button>
+        </form>
+    </div>
+    <script src="./modal.js"></script>
+    <script src="./addItem.js"></script>
     </body>
 </html>
